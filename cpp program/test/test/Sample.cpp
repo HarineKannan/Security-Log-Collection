@@ -164,7 +164,7 @@ JNIEXPORT jobjectArray JNICALL Java_org_example_Test_getArray(JNIEnv* env , jobj
        
         jobjectArray obj = env->NewObjectArray(2, cls, NULL);
         env->SetObjectArrayElement(obj, 0, env->NewStringUTF(std::to_string(eventCode).c_str()));
-        env->SetObjectArrayElement(obj, 1, env->NewStringUTF(sourceName)); // Set timeGenerated here
+        env->SetObjectArrayElement(obj, 1, env->NewStringUTF(sourceName)); 
         env->SetObjectArrayElement(result, count, obj);
         VariantClear(&vtEventCode);
         delete[] sourceName;
